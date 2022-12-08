@@ -1,5 +1,5 @@
 {
-  "name": "microsservice-wallet",
+  "name": "api-movie-catalog",
   "version": "1.0.0",
   "description": "",
   "main": "src/app/server.ts",
