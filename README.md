@@ -43,6 +43,7 @@ git clone https://github.com/lukarmar/movie-catalog-api.git
 Clone repository `<HTTPS>` :
 ```
 git clone git@github.com:lukarmar/movie-catalog-api.git
+```
 
 Install dependencies:
 ```
