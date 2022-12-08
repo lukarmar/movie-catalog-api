@@ -37,13 +37,12 @@ Follow these steps:
 
 Clone repository `<SSH>` :
 ````
-git clone git@bitbucket.org:instacarro/ic-api-crud-car-whitelist.git
+git clone https://github.com/lukarmar/movie-catalog-api.git
 ````
 
 Clone repository `<HTTPS>` :
 ```
-git clone https://ThiRobles@bitbucket.org/instacarro/ic-api-crud-car-whitelist.git
-```
+git clone git@github.com:lukarmar/movie-catalog-api.git
 
 Install dependencies:
 ```
