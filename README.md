@@ -56,6 +56,7 @@ docker-compose up
 ```
 </br>
 
+### Documentation: [api-doc](https://app-api-catalog-movie.herokuapp.com/api-docs/)
 ---
 
 Made by me. At the sound of gun. By Luka Rocha :wave: [Linkedin](https://www.linkedin.com/in/luka-martins/)
