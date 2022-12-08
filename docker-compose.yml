@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: app
+    build: 
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    restart: always
+    depends_on: 
+      - mongo_service
+    links:
+      - mongo_service
+    ports:
+      - 3030:3030
+    volumes:
+      - .:/usr/app
+    networks:
+      - app-network
+
+  mongo_service:
+    container_name: mongo_service
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: test
+      MONGO_INITDB_ROOT_PASSWORD: test
+      MONGO_INITDB_DATABASE: catalog_dev
+      MONGO_USERNAME: test
+      MONGO_PASSWORD: test
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+      # - ./mongo-entrypoint.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
+    # command: mongod
+    networks:
+      - app-network
+
+
+networks:
+  app-network:
+    driver: bridge

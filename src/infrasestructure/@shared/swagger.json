@@ -1,0 +1,145 @@
+{
+  "openapi": "3.0.0",
+  "info":  {
+    "title": "Catalog Movies - API",
+    "description": "This is a sample server for a catalog movies.",
+    "contact": {
+      "name": "Luka Rocha",
+    
+      "email": "luka.rmar@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/catalog": {
+      "post": {
+        "tags": ["Create Catalog"],
+        "summary": "Create a new catalog",
+        "description": "The creation of the catalog is done by external API feed, having no body",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "description": "Title of the movie"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Description of the movie"
+                  },
+                  "director": {
+                    "type": "integer",
+                    "description": "Director of the movie"
+                  },
+                  "producer": {
+                    "type": "string",
+                    "description": "Produce of the movie"
+                  },
+                  "banner": {
+                    "type": "string",
+                    "description": "Banner of the movie"
+                  }
+                },
+                "example": {
+                  "title": "Star Wars",
+                  "description": "A long time ago in a galaxy far, far away...",
+                  "director": "George Lucas",
+                  "producer": "Gary Kurtz, Rick McCallum",
+                  "banner": "https://upload.wikimedia.org/wikipedia/pt/8/87/StarWarsMoviePoster1977.jpg"
+                },
+                "required": [
+                  "title",
+                  "description",
+                  "director",
+                  "producer",
+                  "banner"
+                ]
+              }
+            }
+          }
+        },
+       
+        "responses": {
+          "201": {
+            "description": "Catalog created"
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        } 
+      },
+      "get": {
+        "tags": ["Get Catalogs"],
+        "summary": "List all Catalogs",
+        "description": "List all Catalogs",
+        "responses": {
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string",
+                        "description": "Vehicle id"
+                      },
+                      "title": {
+                        "type": "string",
+                        "description": "Title of the movie"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "Description of the movie"
+                      },
+                      "director": {
+                        "type": "integer",
+                        "description": "Director of the movie"
+                      },
+                      "producer": {
+                        "type": "string",
+                        "description": "Produce of the movie"
+                      },
+                      "banner": {
+                        "type": "string",
+                        "description": "Banner of the movie"
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "description": "Created at of the movie"
+                      },
+                      "updated_at": {
+                        "type": "string",
+                        "description": "Updated at of the movie"
+                      }
+                    },
+                    "example": {
+                      "_id": "5f9f1b9b0b9b9b0b9b0b9b0b",
+                      "title": "Star Wars",
+                      "description": "A long time ago in a galaxy far, far away...",
+                      "director": "George Lucas",
+                      "producer": "Gary Kurtz, Rick McCallum",
+                      "banner": "https://upload.wikimedia.org/wikipedia/pt/8/87/StarWarsMoviePoster1977.jpg",
+                      "created_at": "2020-10-30T20:00:00.000Z",
+                      "updated_at": "2020-10-30T20:00:00.000Z"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
