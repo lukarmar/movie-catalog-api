@@ -1,8 +1,9 @@
 import app from './app'
+import { PORT } from '../infrasestructure/@shared/config/env-manager'
 
 import { logger } from '../infrasestructure/@shared/config/logger'
 
 
-app.listen(3030, () => {
-  logger.info('Server started on port 3030');
+app.listen(PORT, () => {
+  logger.info(`Server started on port ${PORT}`);
 })
