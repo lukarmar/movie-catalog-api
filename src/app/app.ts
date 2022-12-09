@@ -7,15 +7,15 @@ import swaggerUi from 'swagger-ui-express'
 
 import cors from 'cors'
 
-import { runConnectionMongo } from '../infrasestructure/@shared/config/database'
-import swaggerDocument from '../infrasestructure/@shared/swagger.json'
+import { runConnectionMongo } from '../infrastructure/@shared/config/database'
+import swaggerDocument from '../infrastructure/@shared/swagger.json'
 
 
-import rootCatalogRoute from '../infrasestructure/catalog/routes'
-import ErrorHandler from "../infrasestructure/@shared/middlewares/ErrorHandler";
+import rootCatalogRoute from '../infrastructure/catalog/routes'
+import ErrorHandler from "../infrastructure/@shared/middlewares/ErrorHandler";
 
 
-import '../infrasestructure/container'
+import '../infrastructure/container'
 
 const app:Express = express();
 

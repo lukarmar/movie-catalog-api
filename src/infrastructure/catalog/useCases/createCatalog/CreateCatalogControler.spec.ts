@@ -1,7 +1,5 @@
 import request from 'supertest'
 
-// import api from '../../../utils/api-provider'
-
 import app from '../../../../app/app'
 
 describe('Create Catalog', () => {

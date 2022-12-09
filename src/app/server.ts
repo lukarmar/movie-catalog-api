@@ -1,7 +1,7 @@
 import app from './app'
-import { PORT } from '../infrasestructure/@shared/config/env-manager'
+import { PORT } from '../infrastructure/@shared/config/env-manager'
 
-import { logger } from '../infrasestructure/@shared/config/logger'
+import { logger } from '../infrastructure/@shared/config/logger'
 
 
 app.listen(PORT, () => {

@@ -54,9 +54,9 @@ export default class CatalogRepositoryFakeImplementation implements CatalogRepos
   
     async findAll(): Promise<CatalogEntity[]> {
 
-      const findAllVehicles = this.catalogs;
+      const findAllCatalogs = this.catalogs;
 
-      return findAllVehicles;
+      return findAllCatalogs;
     }
 
 }
