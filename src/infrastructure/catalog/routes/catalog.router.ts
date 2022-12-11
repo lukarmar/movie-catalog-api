@@ -1,16 +1,16 @@
 import { Router } from 'express'
-import CreateCatalogCotroller from '../useCases/createCatalog/CreateCatalogController'
+import CreateCatalogController from '../useCases/createCatalog/CreateCatalogController'
 import GetAllCatalogController from '../useCases/getAllUsers/GetAllCatalogController'
 
 
 
 const catalogRouter = Router()
 
-const createCatalogCotroller = new CreateCatalogCotroller()
+const createCatalogController = new CreateCatalogController()
 const getAllCatalogController = new GetAllCatalogController()
 
 
-catalogRouter.post('/', createCatalogCotroller.handle)
+catalogRouter.post('/', createCatalogController.handle)
 catalogRouter.get('/', getAllCatalogController.handle)
 
 
