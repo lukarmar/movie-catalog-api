@@ -5,7 +5,7 @@ import CreateCatalogUseCase from './CreateCatalogUseCase'
 import { getRequestDataMovies } from '../../../utils/api-provider' 
 
 
-export default class CreateCatalogCotroller{
+export default class CreateCatalogController{
   async handle(request: Request, response: Response): Promise<Response> {
     const { page } = request.query
     const pageInt = +page

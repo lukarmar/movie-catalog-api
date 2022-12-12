@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import GetAllCatalogUseCase from './GetAllCatalogUseCase'
 
-export default class GetAllCatalogCotroller{
+export default class GetAllCatalogController{
   async handle(request: Request, response: Response): Promise<Response> {
 
     const getAllCatalogUseCase = container.resolve(GetAllCatalogUseCase)
