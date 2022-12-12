@@ -1,7 +1,3 @@
-import * as dotenv from 'dotenv'
-dotenv.config()
-
-
 import mongoose from "mongoose";
 
 import { logger } from '../logger'
@@ -19,6 +15,9 @@ const CURRENT_NODE_ENV = {
 
 
 export async function runConnectionMongo () {
+
+
+  mongoose.set('strictQuery', false)
 
   try {
     
